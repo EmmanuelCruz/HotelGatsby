@@ -5,7 +5,8 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
-  plugins: [
+  plugins: [  
+    'gatsby-plugin-emotion',
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,5 +31,11 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-datocms',
+      options: {
+        apiToken: 'd97efa54ee606b9e526d6560796c81'
+      }
+    }
   ],
 }
